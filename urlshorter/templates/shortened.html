@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortened URL</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<style>
+</style>
+<body>
+    <div class="container">
+    <h1>Shortened URL: </h1>
+    <p> <a href="{{ short_url }}" target="_blank">{{ short_url }}</a></p>
+    <p>Visits: {{ visits }}</p>
+    </div>
+</body>
+</html>

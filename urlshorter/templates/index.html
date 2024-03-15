@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short URL Service</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<style>
+</style>
+<body>
+  <div class="container">
+  <form id="urlForm" action="/" method="POST">
+    <label for="long_url">Enter URL:</label>
+    <input type="text" id="long_url" name="long_url" required>
+    <br>
+    <label for="custom_short_url">Enter Custom Short URL:</label>
+    <input type="text" id="custom_short_url" name="custom_short_url" pattern="[A-Za-z0-9]{3,}" title="Short URL must be at least 3 characters long and can only contain letters and numbers.">
+    <button type="submit">Shorten</button>
+  </form>
+  
+  {% if message %}
+    <p>{{ message }}</p>
+  {% endif %}
+
+  <div id="result"></div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
